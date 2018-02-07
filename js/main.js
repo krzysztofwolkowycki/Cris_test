@@ -37,4 +37,8 @@ document.getElementById("math2a").onclick = function () {
     elDziel.textContent = numberOne / numberTwo;
     elModulo.textContent = numberOne % numberTwo;
 }
-
+document.getElementById("throw").onclick = function () {
+    var number = Math.floor(Math.random()*6)+1;
+    var elNumber = document.getElementById("numberHere");
+    elNumber.innerHTML = number;
+}
