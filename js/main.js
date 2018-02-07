@@ -42,11 +42,11 @@ document.getElementById("throw").onclick = function () {
     var elNumber = document.getElementById("numberHere");
     elNumber.innerHTML = number;
 }
-var numberFrom = parseFloat(document.getElementById("from").value);
-var numberTo = parseFloat(document.getElementById("to").value);
-document.getElementById("throw2").onclick = function (numberFrom, numberTo) {
 
-    var number = Math.floor(Math.random() * 6) + 1;
+document.getElementById("throw2").onclick = function (numberFrom, numberTo) {
+    var numberFrom = parseFloat(document.getElementById("from").value);
+    var numberTo = parseFloat(document.getElementById("to").value);
+    var number = Math.floor(Math.random() * (numberTo - numberFrom)) + numberFrom;
     var elNumber = document.getElementById("numberYour");
     elNumber.innerHTML = number;
 }
